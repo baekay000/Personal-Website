@@ -49,7 +49,7 @@ function Experiences() {
                 </p>
               </div>
             </div>
-            {/* flicking is not working */}
+            {/* test message */}
             {/* <div className="text-slate-400 text-2xl px-6 py-4 rounded-3xl bg-zinc-300 mr-1 my-4 hover:bg-orange-400 hover:text-slate-950">
               <div className="">
                 URSI Computer Vision Internship
