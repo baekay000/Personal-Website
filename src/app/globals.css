@@ -27,3 +27,11 @@ body {
 } */
 
 
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(to right, #ff8a00, #da1b60);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Hide original text color */
+  }
+}

@@ -15,8 +15,6 @@ module.exports = {
       'zinc-300': '#D9D9D9',
       'orange-400': '#E89B27',
 
-
-
       // 'black': '#000000',
       // 'slate-500': '#435B96',
       // 'fuchsia-950': '#4C1E40',
@@ -35,6 +33,7 @@ module.exports = {
     },
     extend: {},
   },
+  
   plugins: [],
 }
 

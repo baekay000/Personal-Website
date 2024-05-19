@@ -6,24 +6,29 @@ import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   function scrollToElement() {
-    const targetElement = document.getElementById('welcomeSection');
+    const targetElement = document.getElementById("welcomeSection");
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+      targetElement.scrollIntoView({ behavior: "smooth" });
     }
   }
 
   return (
-    <div>
-      <img 
-              className = "rounded-full justify-center flex w-80"
-              src="/intropic.jpg"
-              alt="Picture of Kaylee"
-            />
-      
-      <div className="text-slate-400">something spaces ehre</div>
-      <h1 className="text-slate-400 mb-4 text-4xl lg:text-6xl font-extrabold">
-        I'm Kaylee.
-      </h1>
+    <>
+      <div className="flex justify-between items-center my-40 m-15 border-gray-400 border-2">
+        <div className="flex w-50">
+          <img
+            className="rounded-full justify-left"
+            src="/intropic.jpg"
+            alt="Picture of Kaylee"
+          />
+        </div>
+        <h1 className="text-slate-400 text-4xl lg:text-6xl font-extrabold">
+          I'm Kaylee.
+        </h1>
+      </div>
+      <div className="text-slate-400 flex justify-end">
+        something spaces ehre
+      </div>
 
       <TypeAnimation
         className="text-slate-400"
@@ -64,24 +69,24 @@ const HeroSection = () => {
       </div> */}
 
       <div className="flex justify-center">
-      {/* <button
+        {/* <button
         id="bouncingArrow"
         className="text-slate-400"
         // onClick={() => smoothScrollTo("#welcomeSection", 1000)}
         
       > */}
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={scrollToElement}>
-        <img src="/Vector.svg" alt="" />
-      </button>
-      
-        
-      {/* </button> */}
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={scrollToElement}
+        >
+          <img src="/Vector.svg" alt="" />
+        </button>
       </div>
 
-      <div className="text-slate-400" id="welcomeSection">
-        HEELLLLLLOOO
+      <div className="text-zinc-300 flex justify-center" id="welcomeSection">
+        Welcome to my personal portfolio.
       </div>
-    </div>
+    </>
   );
 };
 
