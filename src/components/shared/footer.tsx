@@ -4,10 +4,10 @@ import Link from "next/link";
 const Footer = () => {
   return (
     // mt auto?
-    <footer className="bottom-0 w-full bg-slate-400">
+    <footer className="bottom-0 w-full">
       <div className="flex justify-between text-xl">
         <div className="text-zinc-300 flex-auto p-5 m-2">
-          <Link href="mailto:kbae1@vols.utk.edu">email</Link>
+          <Link href="mailto:kbae1@vols.utk.edu">Email</Link>
         </div>
 
         <div className="flex">
@@ -18,7 +18,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              github
+              GitHub
             </a>
           </div>
 
@@ -29,7 +29,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              linkedin
+              LinkedIn
             </a>
           </div>
         </div>

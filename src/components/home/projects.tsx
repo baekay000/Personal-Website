@@ -1,53 +1,127 @@
+"use client";
 import React from "react";
+import Flicking, { ViewportSlot } from "@egjs/react-flicking";
+import "@egjs/react-flicking/dist/flicking.css";
+import {
+  Arrow,
+  AutoPlay,
+  Fade,
+  Pagination,
+  Perspective,
+} from "@egjs/flicking-plugins";
+import "@egjs/flicking-plugins/dist/arrow.css";
+import "@egjs/flicking-plugins/dist/pagination.css";
 
 function Projects() {
+  const plugins = [
+    new Arrow(),
+    new AutoPlay({ duration: 3000, direction: "NEXT", stopOnHover: false }),
+    new Fade(),
+    new Perspective({ rotate: 0.5, scale: 2 }),
+  ];
+
   return (
-    <div className="text-slate-400 text-2xl px-6 py-4 rounded-3xl bg-zinc-300 mr-1 my-8 hover:bg-orange-400 hover:text-slate-950">
-      <div>
-        Projects
-        <div className="text-sm mr-3 my-6 overflow-y-auto max-h-80">
-          Hello, I am a second-year undergraduate student studying computer
-          science at the University of Tennessee. As an Dean's List student in
-          two distinct honors programs (Cook Grand Challenge and Heath
-          Integrated Business and Engineering), I am an achiever. I love pushing
-          myself to improve, whether that be in academics or extracurriculars. I
-          learn fast and well, as evidenced from the diversity of my internship
-          experience at Oak Ridge National Laboratory. I also love solving
-          problems, whether that be working through conflict in a group or
-          creating solutions using code that save time, energy, and money. Most
-          of all, I love people. I am an aspiring software engineering that is
-          passionate about creating meaningful products, especially in the
-          medical field. Having volunteered at Williamson Medical Center and
-          East Tennessee Children's Hospital, I have seen first-hand how
-          valuable health is. I want to create products that truly create this
-          value for those that use them. After furthering my education, I look
-          forward to working on these valuable products with diverse
-          individuals, whose unique experiences will allow for the creation of
-          more innovative solutions. During my time at college, I hope to
-          explore different fields of computer science and expose myself to
-          various ideas and innovations. Hello, I am a second-year undergraduate
-          student studying computer science at the University of Tennessee. As
-          an Dean's List student in two distinct honors programs (Cook Grand
-          Challenge and Heath Integrated Business and Engineering), I am an
-          achiever. I love pushing myself to improve, whether that be in
-          academics or extracurriculars. I learn fast and well, as evidenced
-          from the diversity of my internship experience at Oak Ridge National
-          Laboratory. I also love solving problems, whether that be working
-          through conflict in a group or creating solutions using code that save
-          time, energy, and money. Most of all, I love people. I am an aspiring
-          software engineering that is passionate about creating meaningful
-          products, especially in the medical field. Having volunteered at
-          Williamson Medical Center and East Tennessee Children's Hospital, I
-          have seen first-hand how valuable health is. I want to create products
-          that truly create this value for those that use them. After furthering
-          my education, I look forward to working on these valuable products
-          with diverse individuals, whose unique experiences will allow for the
-          creation of more innovative solutions. During my time at college, I
-          hope to explore different fields of computer science and expose myself
-          to various ideas and innovations.
+    <>
+      <div className="border border-pink-100 bg-pink-100/5 rounded-3xl px-6 py-4 mr-1 my-8">
+        <div className="text-zinc-300 text-3xl text-left">Experiences</div>
+        <p className="text-zinc-300 mt-4 pl-3">
+          {"["}For more words... check{" "}
+          <button className="text-slate-400">LinkedIn</button>
+          {"]"}
+        </p>
+        <div className="mx-3 my-8 rounded-3xl">
+          <Flicking
+            className="text-zinc-300 place-self-center mt-7 p-10 text-2xl flex"
+            plugins={plugins}
+            align="center"
+            circular={false}
+            onMoveEnd={(e) => {
+              console.log(e);
+            }}
+          >
+            {/* 4 */}
+
+            <div className="panel bg-blue-400 w-full flex basis-3/4 rounded-3xl flex-col text-center">
+              <img
+                className="self-center w-1/2 p-10"
+                src="/IP_logo.svg"
+                alt="International Paper logo"
+              />
+              <div className="text-zinc-300/85 underline decoration-pink-100/50 underline-offset-8 text-3xl">
+                Identity & Access Management IT Developer Intern
+              </div>
+              <p className="text-slate-400 pt-8 text-m-text">In Progress</p>
+            </div>
+
+            {/* 3 */}
+
+            <div className="panel bg-blue-400 w-full flex basis-3/4 rounded-3xl flex-col text-center">
+              <img
+                className="self-center basis-1/3 m-10"
+                src="/ORNL_logo.svg"
+                alt="Oak Ridge National Laboratory logo"
+              />
+              <div className="text-zinc-300/85 underline decoration-pink-100/50 underline-offset-8 text-3xl">
+                URSI Computer Vision Intern
+              </div>
+
+              <div className="flex justify-center gap-12 flex-wrap p-10">
+                <img className="w-12 h-auto" src="/python.png" alt="" />
+                <img className="w-18 h-12" src="/yolo.png" alt="" />
+              </div>
+            </div>
+
+            {/* 2 */}
+
+            <div className="panel bg-blue-400 w-full flex basis-3/4 rounded-3xl flex-col text-center">
+              <img
+                className="self-center basis-1/3 m-10"
+                src="/ORNL_logo.svg"
+                alt="Oak Ridge National Laboratory logo"
+              />
+              <div className="text-zinc-300/85 underline decoration-pink-100/50 underline-offset-8 text-3xl">
+                ECO Full-Stack Web Development Intern
+              </div>
+
+              <div className="flex justify-center gap-12 flex-wrap p-10">
+                <img className="w-12 h-auto" src="/html-5.png" alt="" />
+                <img className="w-12 h-auto" src="/css-3.png" alt="" />
+                <img className="w-12 h-auto" src="/typescript.png" alt="" />
+                <img className="w-12 h-auto" src="/postgresql.png" alt="" />
+                <img className="w-12 h-auto" src="/leaflet.png" alt="" />
+                <img className="w-12 h-auto" src="/angular.png" alt="" />
+                <img className="w-12 h-auto" src="/php.png" alt="" />
+              </div>
+            </div>
+
+            {/* 1 */}
+
+            <div className="panel bg-blue-400 w-full flex basis-3/4 rounded-3xl flex-col text-center">
+              <img
+                className="self-center w-1/2 p-10"
+                src="/ORNL_logo.svg"
+                alt="Oak Ridge National Laboratory logo"
+              />
+              <div className="text-zinc-300/85 underline decoration-pink-100/50 underline-offset-8 text-3xl">
+                SULI Data Analytics Intern
+              </div>
+
+              <div className="flex justify-center gap-12 flex-wrap p-10">
+                <img className="w-12 h-auto" src="/python.png" alt="" />
+                <img className="w-12 h-auto" src="/geopandas.svg" alt="" />
+                <img className="w-12 h-auto" src="/api.png" alt="" />
+                <img className="w-12 h-auto" src="/arcgis.png" alt="" />
+              </div>
+            </div>
+
+            <ViewportSlot>
+              <span className="flicking-arrow-prev is-thin basis-1/12"></span>
+              <span className="flicking-arrow-next is-thin basis-1/12"></span>
+            </ViewportSlot>
+          </Flicking>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

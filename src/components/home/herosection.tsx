@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
+import { Fade } from "react-awesome-reveal";
 
 const HeroSection = () => {
   function scrollToElement() {
@@ -14,78 +15,69 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center my-40 m-15 border-gray-400 border-2">
-        <div className="flex w-50">
+      <div className="flex flex-row my-40 border-gray-400">
+        <div className="basis-1/2">
           <img
-            className="rounded-full justify-left"
+            className="grow rounded-full justify-left w-2/3"
             src="/intropic.jpg"
             alt="Picture of Kaylee"
           />
         </div>
-        <h1 className="text-slate-400 text-4xl lg:text-6xl font-extrabold">
-          I'm Kaylee.
-        </h1>
-      </div>
-      <div className="text-slate-400 flex justify-end">
-        something spaces ehre
-      </div>
+        <div className="basis-1/2 place-self-center">
+          <div className="flex flex-col">
+            <h1 className="text-pink-100 place-self-center text-5xl lg:text-8xl font-extrabold">
+              I'm Kaylee.
+            </h1>
+            <TypeAnimation
+              className="text-zinc-300 place-self-center flex-wrap mt-7 text-2xl"
+              sequence={[
+                "Honors CS undergraduate",
+                2000,
+                "Dean's List student",
+                2000,
+                "NAE Grand Challenges Scholar",
+                2000,
+                "Heath Integrated Business and Engineering Program Cohort Member",
+                2000,
+              ]}
+              wrapper="span"
+              speed={55}
+              style={{ display: "inline-block" }}
+              repeat={1}
+            />
+            <div className="place-self-center">
+              <Link href="/home">
+                <button className="text-blue-400 px-6 py-4 rounded-full bg-slate-400 mr-6 my-8 hover:bg-pink-100">
+                  Say hello!
+                </button>
+              </Link>
 
-      <TypeAnimation
-        className="text-slate-400"
-        sequence={[
-          // Same substring at the start will only be typed out once, initially
-          "Honors CS undergraduate",
-          1000, // wait 1s before replacing "Mice" with "Hamsters"
-          "Oak Ridge National Laboratory intern",
-          1000,
-          "UT Knoxville sophomore",
-          1000,
-          "Deans List student",
-          1000,
-        ]}
-        wrapper="span"
-        speed={50}
-        style={{ fontSize: "small", display: "inline-block" }}
-        repeat={1} //Infinity
-      />
-
-      <div>
-        {/* <Link className="text-slate-400" href={"/hi"}>Hi</Link> */}
-        <Link href="/home">
-          <button className="text-slate-400 px-6 py-4 rounded-full bg-zinc-300 mr-6 my-8 hover:bg-orange-400">
-            Say hello
+              <Link href="/home">
+                <button className="text-slate-400 px-4 py-4 rounded-full bg-transparent hover:bg-pink-100 border">
+                  Learn more about me
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Fade cascade delay={1500}>
+        <div className="flex justify-center">
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={scrollToElement}
+          >
+            <img src="/Vector.svg" alt="" />
           </button>
-        </Link>
+        </div>
 
-        <Link href="/home">
-          <button className="text-slate-400 px-4 py-4 rounded-full bg-transparent hover:bg-orange-400 border">
-            Learn more about me.
-          </button>
-        </Link>
-      </div>
-
-      {/* <div className="flex justify-center items-end min-h-screen lg:min-h-screen-xl">
-        
-      </div> */}
-
-      <div className="flex justify-center">
-        {/* <button
-        id="bouncingArrow"
-        className="text-slate-400"
-        // onClick={() => smoothScrollTo("#welcomeSection", 1000)}
-        
-      > */}
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          onClick={scrollToElement}
+        <div
+          className="text-zinc-300 text-base flex justify-center pb-3 my-3"
+          id="welcomeSection"
         >
-          <img src="/Vector.svg" alt="" />
-        </button>
-      </div>
-
-      <div className="text-zinc-300 flex justify-center" id="welcomeSection">
-        Welcome to my personal portfolio.
-      </div>
+          Welcome! Please explore below!
+        </div>
+      </Fade>
     </>
   );
 };

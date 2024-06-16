@@ -1,36 +1,43 @@
-import React from 'react'
+"use client";
+import React from "react";
+import { Fade } from "react-awesome-reveal";
+import { TypeAnimation } from "react-type-animation";
+
+// Todo:
+// Add the circling functionality from alan
 
 function AboutMe() {
   return (
     <div>
-      <div className="text-slate-400 text-2xl px-6 py-4 rounded-3xl bg-zinc-300 mr-1 my-8 hover:bg-orange-400 hover:text-slate-950">
-        About
-        <div className="text-sm mr-3 my-6">
-          Hello, I am a second-year undergraduate student studying computer
-          science at the University of Tennessee. As an Dean's List student in
-          two distinct honors programs (Cook Grand Challenge and Heath
-          Integrated Business and Engineering), I am an achiever. I love pushing
-          myself to improve, whether that be in academics or extracurriculars. I
-          learn fast and well, as evidenced from the diversity of my internship
-          experience at Oak Ridge National Laboratory. I also love solving
-          problems, whether that be working through conflict in a group or
-          creating solutions using code that save time, energy, and money. Most
-          of all, I love people. I am an aspiring software engineering that is
-          passionate about creating meaningful products, especially in the
-          medical field. Having volunteered at Williamson Medical Center and
-          East Tennessee Children's Hospital, I have seen first-hand how
-          valuable health is. I want to create products that truly create this
-          value for those that use them. After furthering my education, I look
-          forward to working on these valuable products with diverse
-          individuals, whose unique experiences will allow for the creation of
-          more innovative solutions. During my time at college, I hope to
-          explore different fields of computer science and expose myself to
-          various ideas and innovations.
+      <div className="text-slate-400 text-2xl px-6 py-4 rounded-3xl bg-blue-400 mr-1 my-8 hover:bg-blue-400 hover:text-slate-400">
+        <Fade triggerOnce={false}>
+          <span className="text-zinc-300 text-3xl">About</span>
+        </Fade>
+
+        <div className="mr-3 my-8 text-mtext p-3 flex flex-col space-y-4">
+          <Fade cascade fraction={0.2} duration={6000} damping={0.35}>
+            <p>
+              Hello! I am a <span className="text-pink-100/80">third-year</span>{" "}
+              undergraduate student studying computer science at
+              <span className="text-pink-100/80"> UT Knoxville</span>.
+            </p>
+            <p className="mt-3">
+              My passion is{" "}
+              <span className="text-pink-100/80">creating value </span> and{" "}
+              <span className="text-pink-100/80">solving problems </span>{" "}
+              through developing{" "}
+              <span className="text-pink-100/80">user-centered</span> products.
+            </p>
+            <p className="mt-3">
+              I aspire to be a{" "}
+              <span className="text-pink-100/80">software engineer</span> that
+              creates meaningful, innovative products.
+            </p>
+          </Fade>
         </div>
       </div>
     </div>
   );
 }
 
-export default AboutMe
-
+export default AboutMe;

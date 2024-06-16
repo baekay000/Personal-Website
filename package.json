@@ -11,8 +11,10 @@
   "dependencies": {
     "@egjs/flicking-plugins": "^4.7.1",
     "@egjs/react-flicking": "^4.11.2",
-    "next": "14.0.4",
+    "@emotion/react": "^11.11.4",
+    "next": "^14.2.4",
     "react": "^18",
+    "react-awesome-reveal": "^4.2.11",
     "react-dom": "^18",
     "react-type-animation": "^3.2.0",
     "react-use-downloader": "^1.2.4"
