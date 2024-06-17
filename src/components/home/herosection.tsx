@@ -6,13 +6,6 @@ import { TypeAnimation } from "react-type-animation";
 import { Fade } from "react-awesome-reveal";
 
 const HeroSection = () => {
-  function scrollToElement() {
-    const targetElement = document.getElementById("welcomeSection");
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-
   return (
     <>
       <div className="flex flex-row my-40 border-gray-400">
@@ -26,7 +19,7 @@ const HeroSection = () => {
         <div className="basis-1/2 place-self-center">
           <div className="flex flex-col">
             <h1 className="text-pink-100 place-self-center text-5xl lg:text-8xl font-extrabold">
-              I'm Kaylee.
+              I&quot;m Kaylee.
             </h1>
             <TypeAnimation
               className="text-zinc-300 place-self-center flex-wrap mt-7 text-2xl"
@@ -46,13 +39,12 @@ const HeroSection = () => {
               repeat={1}
             />
             <div className="place-self-center">
-              <Link href="/home">
+              <Link href="mailto:kbae1@vols.utk.edu">
                 <button className="text-blue-400 px-6 py-4 rounded-full bg-slate-400 mr-6 my-8 hover:bg-pink-100">
                   Say hello!
                 </button>
               </Link>
-
-              <Link href="/home">
+              <Link href="/#about">
                 <button className="text-slate-400 px-4 py-4 rounded-full bg-transparent hover:bg-pink-100 border">
                   Learn more about me
                 </button>
@@ -62,13 +54,10 @@ const HeroSection = () => {
         </div>
       </div>
       <Fade cascade delay={1500}>
-        <div className="flex justify-center">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={scrollToElement}
-          >
+        <div className="flex justify-center" id="about">
+          <Link href="/#about">
             <img src="/Vector.svg" alt="" />
-          </button>
+          </Link>
         </div>
 
         <div

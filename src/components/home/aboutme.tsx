@@ -28,7 +28,7 @@ function AboutMe() {
               through developing{" "}
               <span className="text-pink-100/80">user-centered</span> products.
             </p>
-            <p className="mt-3">
+            <p  id="experience" className="mt-3">
               I aspire to be a{" "}
               <span className="text-pink-100/80">software engineer</span> that
               creates meaningful, innovative products.

@@ -3,8 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    // mt auto?
-    <footer className="bottom-0 w-full">
+    <footer className="bottom-0 w-full bg-blue-400 shadow-md opacity-80">
       <div className="flex justify-between text-xl">
         <div className="text-zinc-300 flex-auto p-5 m-2">
           <Link href="mailto:kbae1@vols.utk.edu">Email</Link>
@@ -12,25 +11,29 @@ const Footer = () => {
 
         <div className="flex">
           <div className="text-zinc-300 flex-auto p-5 m-2">
-          <a
-              style={{ display: "table-cell" }}
-              href="https://github.com/baekay000"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
+            <button>
+              <a
+                style={{ display: "table-cell" }}
+                href="https://github.com/baekay000"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </button>
           </div>
 
           <div className="text-zinc-300 flex-auto p-5 m-2">
-            <a
-              style={{ display: "table-cell" }}
-              href="https://www.linkedin.com/in/kaylee-bae/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
+            <button>
+              <a
+                style={{ display: "table-cell" }}
+                href="https://www.linkedin.com/in/kaylee-bae/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </button>
           </div>
         </div>
       </div>
