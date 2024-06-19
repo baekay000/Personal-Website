@@ -9,7 +9,7 @@ const Header = () => {
   const { size, elapsed, percentage, download, cancel, error, isInProgress } =
     useDownloader();
 
-  const fileUrl = "http://localhost:3000/Feb_2024_Kaylee_Resume.pdf";
+  const fileUrl = "/Feb_Kaylee_Bae_Resume.pdf";
   const filename = "Kaylee_Bae_Resume.pdf";
 
   return (
