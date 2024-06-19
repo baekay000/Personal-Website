@@ -11,29 +11,25 @@ const Footer = () => {
 
         <div className="flex">
           <div className="text-zinc-300 flex-auto p-5 m-2">
-            <button>
-              <a
-                style={{ display: "table-cell" }}
-                href="https://github.com/baekay000"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-            </button>
+            <a
+              style={{ display: "table-cell" }}
+              href="https://github.com/baekay000"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
           </div>
 
           <div className="text-zinc-300 flex-auto p-5 m-2">
-            <button>
-              <a
-                style={{ display: "table-cell" }}
-                href="https://www.linkedin.com/in/kaylee-bae/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </a>
-            </button>
+            <a
+              style={{ display: "table-cell" }}
+              href="https://www.linkedin.com/in/kaylee-bae/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>

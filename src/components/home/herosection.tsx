@@ -19,7 +19,7 @@ const HeroSection = () => {
         <div className="basis-1/2 place-self-center">
           <div className="flex flex-col">
             <h1 className="text-pink-100 place-self-center text-5xl lg:text-8xl font-extrabold">
-              I&quot;m Kaylee.
+              I&apos;m Kaylee.
             </h1>
             <TypeAnimation
               className="text-zinc-300 place-self-center flex-wrap mt-7 text-2xl"
@@ -30,15 +30,15 @@ const HeroSection = () => {
                 2000,
                 "NAE Grand Challenges Scholar",
                 2000,
-                "Heath Integrated Business and Engineering Program Cohort Member",
+                "HIBEP Cohort Member",
                 2000,
               ]}
               wrapper="span"
-              speed={55}
+              speed={60}
               style={{ display: "inline-block" }}
               repeat={1}
             />
-            <div className="place-self-center">
+            <div className="place-self-center max-sm:hidden">
               <Link href="mailto:kbae1@vols.utk.edu">
                 <button className="text-blue-400 px-6 py-4 rounded-full bg-slate-400 mr-6 my-8 hover:bg-pink-100">
                   Say hello!

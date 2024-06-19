@@ -19,11 +19,11 @@ function Projects() {
     <>
       <div className="border border-pink-100 bg-pink-100/5 rounded-3xl px-6 py-4 mr-1 my-8">
         <div className="text-zinc-300 text-3xl text-left">
-          Featured Projects
+          Projects
         </div>
         <div className="mx-3 my-8 rounded-3xl">
           <Flicking
-            className="text-zinc-300 place-self-center mt-7 p-10 text-2xl flex"
+            className="text-zinc-300 place-self-center mt-7 p-10 flex"
             plugins={plugins}
             align="center"
             circular={false}
@@ -33,7 +33,7 @@ function Projects() {
           >
             {/* 3 */}
 
-            <div className="panel bg-blue-400 w-full flex basis-3/4 rounded-3xl flex-col text-center">
+            <div className="panel bg-blue-400 flex basis-3/4 rounded-3xl flex-col text-center">
               <div className="p-10 text-3xl">Personal Website</div>
               <div className="flex justify-center">
                 <a
@@ -69,7 +69,7 @@ function Projects() {
 
             {/* 2 */}
 
-            <div className="panel bg-blue-400 w-full flex basis-3/4 rounded-3xl flex-col text-center">
+            <div className="panel bg-blue-400 flex basis-3/4 rounded-3xl flex-col text-center">
               <div className="p-10 text-3xl">Mission of Hope</div>
               <div className="flex justify-center">
                 <a
@@ -107,7 +107,7 @@ function Projects() {
 
             {/* 1 */}
 
-            <div className="panel bg-blue-400 w-full flex basis-3/4 rounded-3xl flex-col text-center">
+            <div className="panel bg-blue-400 flex basis-3/4 rounded-3xl flex-col text-center">
               <div className="p-10 text-3xl">ParkUTK</div>
               <div className="flex justify-center">
                 <a
@@ -146,12 +146,12 @@ function Projects() {
             </div>
 
             <ViewportSlot>
-              <span className="flicking-arrow-prev is-thin basis-1/12"></span>
-              <span className="flicking-arrow-next is-thin basis-1/12"></span>
+              <span className="flicking-arrow-prev is-thin"></span>
+              <span className="flicking-arrow-next is-thin"></span>
             </ViewportSlot>
           </Flicking>
           <p className="text-zinc-300 mt-4 pl-3 flex flex-row justify-center">
-            {"["}To see code, click the images.{"]"}
+            {"["}For code: click images.{"]"}
           </p>
         </div>
       </div>

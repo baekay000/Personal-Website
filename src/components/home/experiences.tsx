@@ -26,7 +26,7 @@ function Experiences() {
         <div className="text-zinc-300 text-3xl text-left">Experience</div>
         <div className="mx-3 my-8 rounded-3xl">
           <Flicking
-            className="text-zinc-300 place-self-center mt-7 p-10 text-2xl flex"
+            className="text-zinc-300 place-self-center mt-7 p-10 flex w-full"
             plugins={plugins}
             align="center"
             circular={false}
@@ -36,7 +36,7 @@ function Experiences() {
           >
             {/* 4 */}
 
-            <div className="panel bg-blue-400 w-full flex basis-3/4 rounded-3xl flex-col text-center">
+            <div className="panel bg-blue-400 flex basis-3/4 rounded-3xl flex-col text-center">
               <img
                 className="self-center w-1/3 p-10"
                 src="/IP_logo.svg"
@@ -53,14 +53,14 @@ function Experiences() {
                 <br />
                 for around 39,000 employees globally.
               </p>
-              <div className="flex justify-center gap-12 flex-wrap p-10">
-                <img className="w-18 h-auto" src="/sailpoint_logo.svg" alt="" />
+              <div className="flex justify-center gap-12 flex-wrap p-10 max-sm:hidden">
+                <img className="w-18 h-auto" src="/SailPoint_logo.svg" alt="" />
               </div>
             </div>
 
             {/* 3 */}
 
-            <div className="panel bg-blue-400 w-full flex basis-3/4 rounded-3xl flex-col text-center">
+            <div className="panel bg-blue-400 flex basis-3/4 rounded-3xl flex-col text-center">
               <img
                 className="self-center w-1/3 p-10"
                 src="/ORNL_logo.svg"
@@ -76,7 +76,7 @@ function Experiences() {
                 <br />
                 when pulling data from Open-Street Map.
               </p>
-              <div className="flex justify-center gap-12 flex-wrap p-10">
+              <div className="flex justify-center gap-12 flex-wrap p-10 max-sm:hidden">
                 <img className="w-12 h-auto" src="/python.png" alt="" />
                 <img className="w-18 h-12" src="/yolo.png" alt="" />
               </div>
@@ -84,7 +84,7 @@ function Experiences() {
 
             {/* 2 */}
 
-            <div className="panel bg-blue-400 w-full flex basis-3/4 rounded-3xl flex-col text-center">
+            <div className="panel bg-blue-400 flex basis-3/4 rounded-3xl flex-col text-center max-sm:pb-5">
               <img
                 className="self-center w-1/3 p-10"
                 src="/ORNL_logo.svg"
@@ -99,7 +99,7 @@ function Experiences() {
                 maintaining, and testing 15+ components for the National
                 Household Travel Survey.
               </p>
-              <div className="flex justify-center gap-12 flex-wrap p-10">
+              <div className="flex justify-center gap-12 flex-wrap p-10 max-sm:hidden">
                 <img className="w-12 h-auto" src="/html-5.png" alt="" />
                 <img className="w-12 h-auto" src="/css-3.png" alt="" />
                 <img className="w-12 h-auto" src="/typescript.png" alt="" />
@@ -112,7 +112,7 @@ function Experiences() {
 
             {/* 1 */}
 
-            <div className="panel bg-blue-400 w-full flex basis-3/4 rounded-3xl flex-col text-center">
+            <div className="panel bg-blue-400 flex basis-3/4 rounded-3xl flex-col text-center">
               <img
                 className="self-center w-1/3 p-10"
                 src="/ORNL_logo.svg"
@@ -128,7 +128,7 @@ function Experiences() {
                 library and ArcGIS REST APIs.
               </p>
 
-              <div className="flex justify-center gap-12 flex-wrap p-10">
+              <div className="flex justify-center gap-12 flex-wrap p-10 max-sm:hidden">
                 <img className="w-12 h-auto" src="/python.png" alt="" />
                 <img className="w-12 h-auto" src="/geopandas.svg" alt="" />
                 <img className="w-12 h-auto" src="/api.png" alt="" />
@@ -137,27 +137,24 @@ function Experiences() {
             </div>
 
             <ViewportSlot>
-              <span className="flicking-arrow-prev is-thin basis-1/12"></span>
-              <span className="flicking-arrow-next is-thin basis-1/12"></span>
+              <span className="flicking-arrow-prev is-thin"></span>
+              <span className="flicking-arrow-next is-thin"></span>
             </ViewportSlot>
           </Flicking>
 
           <p
             id="projects"
-            className="text-zinc-300 mt-4 pl-3 flex flex-row justify-center"
+            className="text-zinc-300 mt-4 pl-3 flex justify-center"
           >
-            {"["}To learn more... check my&nbsp;
-            <button>
-              <a
-                style={{ display: "table-cell" }}
-                href="https://www.linkedin.com/in/kaylee-bae/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-pink-100"
-              >
-                LinkedIn.
-              </a>
-            </button>
+            {"["}For more:&nbsp;
+            <a
+              href="https://www.linkedin.com/in/kaylee-bae/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-pink-100"
+            >
+              LinkedIn.
+            </a>
             {"]"}
           </p>
         </div>

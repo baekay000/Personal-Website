@@ -21,11 +21,11 @@ const Header = () => {
         </div>
 
         <div className="flex items-center">
-          <div className="text-zinc-300 flex-auto p-5 m-2">
+          <div className="text-zinc-300 flex-auto p-5 m-2 max-sm:hidden">
             <Link href="/#experience">Experience</Link>
           </div>
 
-          <div className="text-zinc-300 flex-auto p-5 m-2">
+          <div className="text-zinc-300 flex-auto p-5 m-2 max-sm:hidden">
             <Link href="/#projects">Projects</Link>
           </div>
           <button
